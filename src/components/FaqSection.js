@@ -1,8 +1,11 @@
 import React from 'react';
+//styles
+import {StyledLayout, StyledDescription, StyledImage, StyledHide} from '../styles';
+
 
 const FaqSection = () => {
     return(
-        <div className="faq">
+        <StyledLayout>
             <h2>Any Questions <span>FAQ</span></h2>
             <div className="question">
                 <h4>How Do I Start?</h4>
@@ -32,7 +35,7 @@ const FaqSection = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptates.</p>
                 </div>
             </div>
-        </div>
+        </StyledLayout>
     )
 }
 
