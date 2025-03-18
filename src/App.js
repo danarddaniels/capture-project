@@ -4,7 +4,10 @@ import GlobalStyles from './components/GlobalStyles';
 //import pages
 import AboutUs from './pages/AboutUs';
 import Navigation from './components/Navigation';
-import {Switch, Route} from 'react-router-dom';
+import ContactUs from './pages/ContactUs';
+import OurWork from './pages/OurWork';
+//router
+import { Route, Routes} from 'react-router-dom';
 
 
 function App() {
@@ -12,8 +15,11 @@ function App() {
     <div className="App">
       <GlobalStyles />
       <Navigation />
-      {/* <Route path = "/"></Route> */}
-      <AboutUs />
+        <Routes>
+          <Route path="/" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/work" element={<OurWork />} />
+        </Routes>
     </div>
   );
 }
